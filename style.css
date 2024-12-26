@@ -30,12 +30,12 @@ html {
 }
 
 .scroll {
-  scroll-margin-top: 150px; /* Sesuaikan dengan tinggi navbar */
+    scroll-margin-top: 150px;
 }
 
 .fade-in.visible {
-  opacity: 1; /* Muncul */
-  transform: translateY(0); /* Kembali ke posisi semula */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -43,7 +43,6 @@ html {
 
 header {
     height: 77vh;
-    /* border: solid; */
 }
 
 /* nav-start */
@@ -124,36 +123,16 @@ nav ul {
     -o-border-radius: 5px;
 }
 
-@media only screen and (max-width: 750px) {
-    nav {
-        flex-wrap: wrap;
-    }
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    .icon {
-        display: flex;
-        align-items: center;
-    }
-    nav ul {
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-
 .glitch {
     position: relative;
     display: inline-block;
-    color: var(--color-text); /* Warna teks utama */
-    cursor: pointer; /* Memberikan indikator klik */
+    color: var(--color-text);
+    cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    -webkit-transition: transform 0.2s ease-in-out;
+    -moz-transition: transform 0.2s ease-in-out;
+    -ms-transition: transform 0.2s ease-in-out;
+    -o-transition: transform 0.2s ease-in-out;
 }
 
 .glitch:hover {
@@ -169,19 +148,19 @@ nav ul {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    clip: rect(0, 900px, 0, 0); /* Membatasi area teks */
+    clip: rect(0, 900px, 0, 0);
     animation: glitch-effect 0.3s infinite alternate ease-in-out;
 }
 
 .glitch:hover::before {
-    color: #ff0000; /* Warna glitch merah */
-    transform: translate(-2px, -2px); /* Awal gerakan */
+    color: #ff0000;
+    transform: translate(-2px, -2px);
     animation-delay: 0.1s;
 }
 
 .glitch:hover::after {
-    color: #0000ff; /* Warna glitch biru */
-    transform: translate(2px, 2px); /* Awal gerakan */
+    color: #0000ff;
+    transform: translate(2px, 2px);
     animation-delay: 0.2s;
 }
 /* nav-end */
@@ -262,7 +241,6 @@ nav ul {
 /* animation-end */
 
 /* jumbotron-start */
-
 .line-1{
     position: relative;
     top: 50%;
@@ -299,55 +277,14 @@ nav ul {
     display: flex;
     align-items: center;
 }
-
-@media only screen and (max-width: 750px) {
-    .pfp {
-        flex-direction: column;
-        align-items: center;
-    }
-    .pfp img {
-        width: 8rem;
-        margin-left: 0;
-        margin-top: 18vh;
-    }
-    .line-1{
-        position: relative;
-        top: 50%;
-        width: 24em;
-        margin: 3.5rem auto;
-        font-size: 120%;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        max-width: 100%;
-        word-wrap: break-word;
-    }
-}
-
-@media only screen and (min-width: 750px) and (max-width: 1080px) {
-    .line-1{
-        position: relative;
-        top: 50%;
-        width: 24em;
-        margin: 20rem 5rem;
-        font-size: 125%;
-    }
-    
-    .pfp img {
-        width: 9.5rem;
-        margin-left: 7rem;
-        border: solid 8px;
-    }
-}
-
 /* jumbotron-end */
 
 /* header-end */
 
+
 /* main-start */
 
 /* about-start */
-
 h1 {
     text-align: center;
     margin-top: 45vh;
@@ -377,16 +314,16 @@ h1:hover{
     -moz-transition: 300ms;
     -ms-transition: 300ms;
     -o-transition: 300ms;
+    font-size: 16px;
 }
+
 
 .mini-text:hover {
     box-shadow: -15px 15px;
 }
-
 /* about-end */
 
 /* project-start */
-
 .container-grid {
     display: grid;
     text-align: center;
@@ -424,13 +361,6 @@ h1:hover{
     -o-border-radius: 5px;
     border: var(--color-text) solid;
 }
-
-@media only screen and (max-width: 1024px) {
-    .container-grid {
-        grid-template-columns: auto;
-    }
-}
-
 /* project-end */
 
 /* contect-start */
@@ -490,19 +420,12 @@ button:active {
 .input:focus {
     border: var(--color-text);
 }
-
-@media only screen and (max-width: 750px) {
-    .input {
-        width: 85%;
-    }
-}
-
 /* contact-end */
 
 /* main-end */
 
-/* footer-start */
 
+/* footer-start */
 footer {
     background-color: var(--dark-color);
     padding: 40px;
@@ -515,5 +438,131 @@ footer {
 .footer {
     text-align: center;
 }
+/* footer-end */
+
+/* responsive_design-start */
+@media only screen and (min-width: 750px) and (max-width: 1080px) {
+
+/* jumbotron */
+    .line-1{
+        position: relative;
+        top: 50%;
+        width: 24em;
+        margin: 20rem 5rem;
+        font-size: 125%;
+    }
+    
+    .pfp img {
+        width: 9.5rem;
+        margin-left: 7rem;
+        border: solid 8px;
+    }
+}
+/* /jumbotron */
+
+@media only screen and (max-width: 1024px) {
+    /* main */
+    .container-grid {
+        grid-template-columns: auto;
+    }
+    /* /main */
+}
 
 
+@media only screen and (max-width: 750px) {
+
+/* nav */
+.nav-pfp {
+    font-size: 16px;
+    gap: 3px;
+}
+
+.nav-pfp img {
+    width: 50px;
+}
+
+    nav {
+        flex-wrap: wrap;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .hidden {
+        display: none;
+        transition: linear 0.3s;
+        -webkit-transition: linear 0.3s;
+        -moz-transition: linear 0.3s;
+        -ms-transition: linear 0.3s;
+        -o-transition: linear 0.3s;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+    }
+    nav ul {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.icon {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    font-size: 28px;
+    margin-top: 18px;
+    margin-right: 1.5rem;
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+}
+/* /nav */
+
+/* jumbotron */
+.pfp {
+    flex-direction: column;
+    align-items: center;
+}
+.pfp img {
+    width: 8rem;
+    margin-left: 0;
+    margin-top: 18vh;
+}
+.line-1{
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 3.5rem auto;
+    font-size: 120%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+/* /jumbotron */
+
+/* about */
+.mini-text {
+    font-size: 12px;
+    letter-spacing: normal;
+    margin: 2rem;
+}
+/* /about */
+
+/* contact */
+.input {
+    width: 85%;
+}
+
+form {
+    margin: 2rem;
+}
+/* contact */
