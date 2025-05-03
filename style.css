@@ -6,7 +6,7 @@
 }
 
 :root{
-    --primary-color: #C2FFC7; 
+    --primary-color: #a3eca9; 
     --secondary-color: #8bca88;
     --dark-color: rgba(98, 130, 93, 1);
     --super-dark-color: #526E48;
@@ -337,6 +337,7 @@ h1:hover{
     gap: 2.5rem;
     margin: 3rem;
 }
+
 .card p span {
     font-family: pixel;
     font-size: 12px;
@@ -604,5 +605,4 @@ footer {
     padding: 25px;
 }
 /* /contact */
-
 }
