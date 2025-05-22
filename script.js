@@ -1,21 +1,29 @@
 const menuicon = document.getElementById('icon-menu');
 const menulist = document.getElementById('menu-list');
+const codeName = document.getElementById('code-name');
+const codeNameList = ["KYU", "CONNECTION", "RUBIKU", "RIKU", "LOADING", "HTR"];
 
 menuicon.addEventListener("click", () => {
-    menulist.classList.toggle('hidden');
-})
+  menulist.classList.toggle('hidden');
+});
+
+window.addEventListener("load", () => {
+  const selected = codeNameList[Math.floor(Math.random() * codeNameList.length)];
+  codeName.innerHTML = `code name {${selected.toLowerCase()}}`;
+  codeName.setAttribute("data-text", `code name {${selected.toLowerCase()}}`);
+});
 
 // script.js
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
 
     const target = document.querySelector(this.getAttribute('href'));
     target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+      behavior: 'smooth',
+      block: 'start'
     });
-    });
+  });
 });
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxuwLN0ran-WPE-AQH5zDcVaIt7gV3RgNi9X9dkzVdpr6VHpuNw38wRXgZpfy5pN43Oiw/exec';
@@ -46,7 +54,7 @@ form.addEventListener('submit', e => {
     })
     .finally(() => {
       submitButton.disabled = false; // Aktifkan tombol kembali
-      
+
       // Sembunyikan pesan setelah 3 detik
       setTimeout(() => {
         statusMessage.style.display = 'none'; // Atau gunakan visibility: 'hidden'
